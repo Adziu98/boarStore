@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet"
 	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 <title>Produkty</title>
@@ -19,11 +19,15 @@
 	</section>
 	<section class="container">
 		<div class="row">
+		<div class="col-md-5">
+	<img src="<c:url value="/resource/images/${product.productId}.png"></c:url>" alt="image"  style = "width:100%"/>
+</div>
+		
 			<div class="col-md-5">
 				<h3>${product.name}</h3>
 				<p>${product.description}</p>
 				<p>
-					<strong>Kod produktu: </strong><span class="label label-warning">${product.productId}</span>
+					<strong>Identyfikator produktu: </strong><span class="label label-warning">${product.productId}</span>
 				</p>
 				<p>
 					<strong>Producent</strong>: ${product.manufacturer}
